@@ -11,8 +11,10 @@ public class Main {
         b = Math.round(b * 100) / 100.0;
         c = Math.round(c * 100) / 100.0;
 
-        System.out.println(c);
-        System.out.println(b);
+        System.out.printf("%.2f", c);
+        System.out.println("");
+        System.out.printf("%.2f", b);
+        System.out.println("");
         System.out.println(a);
     }
 }
