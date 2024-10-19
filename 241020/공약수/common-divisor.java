@@ -6,11 +6,11 @@ public class Main {
 
         int[] b = new int[sc.nextInt()];
 
-        Arrays.sort(b);
-
         for(int i = 0; i < b.length; i++) {
             b[i] = sc.nextInt();
         }
+
+        Arrays.sort(b);
 
         for(int i = 1; i <= b[0]; i++) {
             if(b[0] % i == 0) {
