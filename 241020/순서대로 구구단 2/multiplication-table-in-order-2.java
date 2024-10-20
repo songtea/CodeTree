@@ -12,7 +12,7 @@ public class Main {
 
             for(int i = 0; i < arr.length; i++) {
                 arr[i] = a;
-                a--;
+                a++;
             }
 
             for(int i = 0; i < arr.length; i++) {
