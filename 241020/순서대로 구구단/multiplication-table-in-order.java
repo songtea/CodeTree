@@ -30,8 +30,8 @@ public class Main {
             length = (a - b) + 1;
             arr = new int[length];
             for(int i = 0; i < arr.length; i++) {
-                arr[i] = b;
-                b--;
+                arr[i] = a;
+                a--;
             }
 
             for(int i = 1; i <= 9; i++) {
