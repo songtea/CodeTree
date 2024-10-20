@@ -11,8 +11,8 @@ public class Main {
             int[] arr = new int[(b - a) + 1];
 
             for(int i = 0; i < arr.length; i++) {
-                arr[i] = b;
-                b--;
+                arr[i] = a;
+                a--;
             }
 
             for(int i = 0; i < arr.length; i++) {
