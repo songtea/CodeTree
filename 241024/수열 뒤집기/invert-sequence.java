@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int arrlength = sc.nextInt();
-        int repeat = sc.nextInt();
+        int repeat = sc.nextInt() % 2 == 0 ? 2 : 3;
 
         int[] arr = new int[arrlength];
 
@@ -18,7 +18,7 @@ public class Main {
         int b1 = sc.nextInt();
         int b2 = sc.nextInt();
 
-        for(int i = 0; i < repeat; i++) {
+        for(int i = 0; i < 3; i++) {
             int[] arratemp = Arrays.copyOfRange(arr, a1 - 1, a2);
             int aidx = 0;
 
