@@ -43,30 +43,26 @@ public class Main {
             }
         }
 
-        for(int i = 1; i <= arrlength; i++) {
-            arr[i - 1] = i;
-        }
-
         for(int i = 0; i < minRepeat; i++) {
-            int[] arratemp = Arrays.copyOfRange(arr, a1 - 1, a2);
+            int[] arratemp = Arrays.copyOfRange(arrclone, a1 - 1, a2);
             int aidx = 0;
 
             for(int j = a2 - 1; j >= a1 - 1; j--) {
-                arr[j] = arratemp[aidx];
+                arrclone[j] = arratemp[aidx];
                 aidx++;
             }
 
-            int[] arrbtemp = Arrays.copyOfRange(arr, b1 - 1, b2);
+            int[] arrbtemp = Arrays.copyOfRange(arrclone, b1 - 1, b2);
             int bidx = 0;
 
             for(int j = b2 - 1; j >= b1 - 1; j--) {
-                arr[j] = arrbtemp[bidx];
+                arrclone[j] = arrbtemp[bidx];
                 bidx++;
             }
         }
 
         for(int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+            System.out.println(arrclone[i]);
         }
     }
 }
