@@ -14,6 +14,8 @@ public class Main {
             repeat = 3;
         }else if(repeat % 2 == 0) {
             repeat = 2;
+        }else{
+            repeat = 1;
         }
 
         int[] arr = new int[arrlength];
