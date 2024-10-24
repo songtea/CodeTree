@@ -12,8 +12,6 @@ public class Main {
             repeat = 4;
         }else if(repeat % 3 == 0) {
             repeat = 3;
-        }else if(repeat % 2 == 0) {
-            repeat = 2;
         }else if(repeat % 2 != 0){
             repeat = 3;
         }else{
@@ -31,6 +29,7 @@ public class Main {
         int b1 = sc.nextInt();
         int b2 = sc.nextInt();
 
+        // for(int i = 0; i < repeat; i++) {
         for(int i = 0; i < repeat; i++) {
             int[] arratemp = Arrays.copyOfRange(arr, a1 - 1, a2);
             int aidx = 0;
