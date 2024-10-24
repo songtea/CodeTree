@@ -7,12 +7,6 @@ public class Main {
         int arrlength = sc.nextInt();
         int repeat = sc.nextInt();
 
-        if(repeat % 2 == 0) {
-            repeat = 2;
-        }else if(repeat % 3 == 0) {
-            repeat = 3;
-        }
-
         int[] arr = new int[arrlength];
 
         for(int i = 1; i <= arrlength; i++) {
@@ -25,7 +19,6 @@ public class Main {
         int b2 = sc.nextInt();
 
         for(int i = 0; i < repeat; i++) {
-        // for(int i = 0; i < ; i++) {
             int[] arratemp = Arrays.copyOfRange(arr, a1 - 1, a2);
             int aidx = 0;
 
