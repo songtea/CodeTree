@@ -5,7 +5,16 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int arrlength = sc.nextInt();
-        int repeat = sc.nextInt() % 2 == 0 ? 2 : 3;
+        // int repeat = sc.nextInt() % 2 == 0 ? 2 : 3;
+        int repeat = sc.nextInt();
+
+        if(repeat % 4 == 0) {
+            repeat = 4;
+        }else if(repeat % 3 == 0) {
+            repeat = 3;
+        }else if(repeat % 2 == 0) {
+            repeat = 2;
+        }
 
         int[] arr = new int[arrlength];
 
