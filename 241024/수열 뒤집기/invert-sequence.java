@@ -7,24 +7,6 @@ public class Main {
         int arrlength = sc.nextInt();
         int repeat = sc.nextInt();
 
-        if(repeat % 9 == 0) {
-            repeat = 9;
-        }else if(repeat % 8 == 0) {
-            repeat = 8;
-        }else if(repeat % 7 == 0) {
-            repeat = 7;
-        }else if(repeat % 6 == 0) {
-            repeat = 6;
-        }else if(repeat % 5 == 0) {
-            repeat = 5;
-        }else if(repeat % 4 == 0) {
-            repeat = 4;
-        }else if(repeat % 3 == 0) {
-            repeat = 3;
-        }else if(repeat % 2 == 0) {
-            repeat = 2;
-        }
-
         int[] arr = new int[arrlength];
 
         for(int i = 1; i <= arrlength; i++) {
@@ -37,7 +19,6 @@ public class Main {
         int b1 = sc.nextInt();
         int b2 = sc.nextInt();
 
-        // for(int i = 0; i < repeat; i++) {
         for(int i = 0; i < repeat; i++) {
             int[] arratemp = Arrays.copyOfRange(arr, a1 - 1, a2);
             int aidx = 0;
