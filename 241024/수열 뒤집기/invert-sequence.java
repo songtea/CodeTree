@@ -18,7 +18,7 @@ public class Main {
         int b1 = sc.nextInt();
         int b2 = sc.nextInt();
 
-        for(int i = 0; i < 3; i++) {
+        for(int i = 0; i < repeat; i++) {
             int[] arratemp = Arrays.copyOfRange(arr, a1 - 1, a2);
             int aidx = 0;
 
