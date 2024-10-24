@@ -13,26 +13,24 @@ public class Main {
             arr[i - 1] = i;
         }
 
-        int[] arra = new int[2];
-        arra[0] = sc.nextInt();
-        arra[1] = sc.nextInt();
-        int[] arrb = new int[2];
-        arrb[0] = sc.nextInt();
-        arrb[1] = sc.nextInt();
+        int a1 = sc.nextInt();
+        int a2 = sc.nextInt();
+        int b1 = sc.nextInt();
+        int b2 = sc.nextInt();
 
         for(int i = 0; i < repeat; i++) {
-            int[] arratemp = Arrays.copyOfRange(arr, arra[0] - 1, arra[1]);
+            int[] arratemp = Arrays.copyOfRange(arr, a1 - 1, a2);
             int aidx = 0;
 
-            for(int j = arra[1] - 1; j >= arra[0] - 1; j--) {
+            for(int j = a2 - 1; j >= a1 - 1; j--) {
                 arr[j] = arratemp[aidx];
                 aidx++;
             }
 
-            int[] arrbtemp = Arrays.copyOfRange(arr, arrb[0] - 1, arrb[1]);
+            int[] arrbtemp = Arrays.copyOfRange(arr, b1 - 1, b2);
             int bidx = 0;
 
-            for(int j = arrb[1] - 1; j >= arrb[0] - 1; j--) {
+            for(int j = b2 - 1; j >= b1 - 1; j--) {
                 arr[j] = arrbtemp[bidx];
                 bidx++;
             }
