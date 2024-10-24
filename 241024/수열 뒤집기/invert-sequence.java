@@ -6,6 +6,7 @@ public class Main {
 
         int arrlength = sc.nextInt();
         int repeat = sc.nextInt();
+        int minRepeat = repeat;
 
         int[] arr = new int[arrlength];
 
@@ -36,10 +37,28 @@ public class Main {
                 bidx++;
             }
 
-            // if(Arrays.equals(arr,arrclone)) {
-            //     System.out.println(i);
-            //     break;
-            // }
+            if(Arrays.equals(arr,arrclone)) {
+                minRepeat = repeat % (i + 1);
+                break;
+            }
+        }
+
+        for(int i = 0; i < minRepeat; i++) {
+            int[] arratemp = Arrays.copyOfRange(arr, a1 - 1, a2);
+            int aidx = 0;
+
+            for(int j = a2 - 1; j >= a1 - 1; j--) {
+                arr[j] = arratemp[aidx];
+                aidx++;
+            }
+
+            int[] arrbtemp = Arrays.copyOfRange(arr, b1 - 1, b2);
+            int bidx = 0;
+
+            for(int j = b2 - 1; j >= b1 - 1; j--) {
+                arr[j] = arrbtemp[bidx];
+                bidx++;
+            }
         }
 
         for(int i = 0; i < arr.length; i++) {
