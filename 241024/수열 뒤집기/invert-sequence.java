@@ -5,15 +5,24 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int arrlength = sc.nextInt();
-        // int repeat = sc.nextInt() % 2 == 0 ? 2 : 3;
         int repeat = sc.nextInt();
 
-        if(repeat % 4 == 0) {
+        if(repeat % 9 == 0) {
+            repeat = 9;
+        }else if(repeat % 8 == 0) {
+            repeat = 8;
+        }else if(repeat % 7 == 0) {
+            repeat = 7;
+        }else if(repeat % 6 == 0) {
+            repeat = 6;
+        }else if(repeat % 5 == 0) {
+            repeat = 5;
+        }else if(repeat % 4 == 0) {
             repeat = 4;
         }else if(repeat % 3 == 0) {
             repeat = 3;
-        }else if(repeat % 2 != 0){
-            repeat = 3;
+        }else if(repeat % 2 == 0) {
+            repeat = 2;
         }
 
         int[] arr = new int[arrlength];
@@ -22,6 +31,7 @@ public class Main {
             arr[i - 1] = i;
         }
 
+        int[] arrclone = Arrays.copyOf(arr, arr.length);
         int a1 = sc.nextInt();
         int a2 = sc.nextInt();
         int b1 = sc.nextInt();
@@ -44,6 +54,11 @@ public class Main {
                 arr[j] = arrbtemp[bidx];
                 bidx++;
             }
+
+            // if(Arrays.equals(arr,arrclone)) {
+            //     System.out.println(i);
+            //     break;
+            // }
         }
 
         for(int i = 0; i < arr.length; i++) {
