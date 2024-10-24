@@ -21,28 +21,16 @@ public class Main {
         arrb[1] = sc.nextInt();
 
         for(int i = 0; i < repeat; i++) {
-            int[] arratemp = new int[arra[1] - arra[0] + 1];
+            int[] arratemp = Arrays.copyOfRange(arr, arra[0] - 1, arra[1]);
             int aidx = 0;
-            for(int j = arra[0] - 1; j <= arra[1] - 1; j++) {
-                arratemp[aidx] = arr[j];
-                aidx++;
-            }
-
-            aidx = 0;
 
             for(int j = arra[1] - 1; j >= arra[0] - 1; j--) {
                 arr[j] = arratemp[aidx];
                 aidx++;
             }
 
-            int[] arrbtemp = new int[arrb[1] - arrb[0] + 1];
+            int[] arrbtemp = Arrays.copyOfRange(arr, arrb[0] - 1, arrb[1]);
             int bidx = 0;
-            for(int j = arrb[0] - 1; j <= arrb[1] - 1; j++) {
-                arrbtemp[bidx] = arr[j];
-                bidx++;
-            }
-
-            bidx = 0;
 
             for(int j = arrb[1] - 1; j >= arrb[0] - 1; j--) {
                 arr[j] = arrbtemp[bidx];
